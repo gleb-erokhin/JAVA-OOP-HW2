@@ -8,5 +8,5 @@ public class Human extends Participants {
 
     public Human() {
     }
-    
+
 }
