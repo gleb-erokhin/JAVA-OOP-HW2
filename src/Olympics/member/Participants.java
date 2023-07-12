@@ -2,16 +2,13 @@ package Olympics.member;
 
 public class Participants {
     protected  String name;
-    protected String type;
 
     protected int maxRunDist;
     protected int maxJumpHeight;
 
 
-    public Participants(String name, String type, int maxRunDist, int maxJumpHeight) {
+    public Participants(String name, int maxRunDist, int maxJumpHeight) {
         this.name = name;
-        this.type = type;
-        if(type.equals("Кот"))
         this.maxRunDist = maxRunDist;
         this.maxJumpHeight = maxJumpHeight;
     }
@@ -19,21 +16,50 @@ public class Participants {
     public Participants() {
     }
 
-    public void run(int dist) {
-        if (maxRunDist <= dist) {
-            System.out.println(type + " " + name + " - пребежал дистанцию " + dist + " метров");
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMaxRunDist() {
+        return maxRunDist;
+    }
+
+    public void setMaxRunDist(int maxRunDist) {
+        this.maxRunDist = maxRunDist;
+    }
+
+    public int getMaxJumpHeight() {
+        return maxJumpHeight;
+    }
+
+    public void setMaxJumpHeight(int maxJumpHeight) {
+        this.maxJumpHeight = maxJumpHeight;
+    }
+
+    public boolean run(int dist) {
+        if (maxRunDist >= dist) {
+            System.out.println(name + " - пребежал дистанцию " + dist + " метров");
+            return true;
         }
         else {
-            System.out.println(type  + " " + name + " - не пребежал дистанцию " + dist + " метров");
+            System.out.println(name + " - не пребежал дистанцию " + dist + " метров");
+            return false;
         }
     }
 
-    protected void jump(int height) {
-        if (height <= maxJumpHeight) {
-            System.out.println(type  + " " + name + " - смог перепрыгнуть высоту " + height + " метров");
+    protected boolean jump(int height) {
+        if (maxJumpHeight >= height ) {
+            System.out.println(name + " - смог перепрыгнуть высоту " + height + " метров");
+            return true;
         }
         else {
-            System.out.println(type  + " " + name + " - не смог перепрыгнуть высоту " + height + " метров");
+            System.out.println(name + " - не смог перепрыгнуть высоту " + height + " метров");
+            return false;
         }
     }
 }
