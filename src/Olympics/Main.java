@@ -12,12 +12,12 @@ public class Main {
                 new Cat("Киса", 100, 100 ),
         };
         Sports[] obstractCourse = {
-                new Wall(150),
                 new RaceTrack(200),
-                new Wall(110),
+                new Wall(150),
                 new RaceTrack(50),
-                new Wall(50),
-                new RaceTrack(300)
+                new Wall(110),
+                new RaceTrack(300),
+                new Wall(50)
         };
 
         for (Participants s : members) {
