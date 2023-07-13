@@ -1,6 +1,8 @@
 package Olympics.obstacles;
 
-public class Wall {
+import Olympics.member.Sports;
+
+public class Wall extends Sports {
     int height;
 
     public Wall(int height) {

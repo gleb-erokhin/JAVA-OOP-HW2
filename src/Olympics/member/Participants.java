@@ -16,6 +16,9 @@ public class Participants {
     public Participants() {
     }
 
+    public String hello() {
+        return name;
+    }
 
     public String getName() {
         return name;
@@ -52,7 +55,7 @@ public class Participants {
         }
     }
 
-    protected boolean jump(int height) {
+    public boolean jump(int height) {
         if (maxJumpHeight >= height ) {
             System.out.println(name + " - смог перепрыгнуть высоту " + height + " метров");
             return true;
